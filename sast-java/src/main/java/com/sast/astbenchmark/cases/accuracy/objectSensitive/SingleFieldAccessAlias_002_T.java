@@ -1,0 +1,42 @@
+package com.sast.astbenchmark.cases.accuracy.objectSensitive;
+
+import com.sast.astbenchmark.model.alias.A;
+import com.sast.astbenchmark.model.alias.B;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * Introduction 对象敏感-别名是否被污染-SingleFieldAccessAlias
+ * Level X
+ * Date 2024-07-02
+ */
+// assession information start
+// real vulnerability = true
+// assession project = 准确度->对象敏感->别名是否被污染->SingleFieldAccessAlias
+// compose = SingleFieldAccessAlias_002_T.java
+// bind_url = accuracy/objectSensitive/SingleFieldAccessAlias_002_T
+// assession information end
+@RestController
+@RequestMapping("accuracy/objectSensitive")
+public class SingleFieldAccessAlias_002_T {
+    @PostMapping(value = "SingleFieldAccessAlias_002_T")
+    public Map<String, Object> testcase(@RequestParam int id) {
+        Map<String, Object> modelMap = new HashMap<>();
+        try {
+            B b = new B();
+            A a = new A();
+            b.attr = a;
+            a.i = id;
+            Runtime.getRuntime().exec("cat /some/path/" + b.attr.i + ".png");
+            modelMap.put("status", "success");
+        } catch (Exception e) {
+            modelMap.put("status", "error");
+        }
+        return modelMap;
+    }
+}
