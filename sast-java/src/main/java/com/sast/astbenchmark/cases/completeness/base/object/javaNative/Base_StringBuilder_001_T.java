@@ -34,7 +34,7 @@ public class Base_StringBuilder_001_T {
         StringBuilder data = new StringBuilder();
         data.append(cmd);
         try {
-            Runtime.getRuntime().exec(data.toString());
+            Runtime.getRuntime().exec(data.toString());  // $CWE-78
             modelMap.put("status", "success");
         } catch (IOException e) {
             modelMap.put("status", "error");

@@ -31,7 +31,7 @@ public class InterproceduralAlias_002_F {
             DataClass dc1 = new DataClass();
             Invoke.taintMe(dc1, "foo");
 
-            Runtime.getRuntime().exec(dc1.data);
+            Runtime.getRuntime().exec(dc1.data);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

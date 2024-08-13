@@ -41,7 +41,7 @@ public class HeapPointsToSelfAlias_002_F {
             l1 = l1.next;
             cycle.data = cmd;
             y.next.data = "foo";
-            Runtime.getRuntime().exec(l1.data);
+            Runtime.getRuntime().exec(l1.data);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

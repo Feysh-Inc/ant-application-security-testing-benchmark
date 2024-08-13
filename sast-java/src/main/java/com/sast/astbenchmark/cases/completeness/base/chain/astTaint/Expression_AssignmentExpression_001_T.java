@@ -33,7 +33,7 @@ public class Expression_AssignmentExpression_001_T {
         try {
             String[] b = {"a","b"};
             System.arraycopy(cmd,0,b,0,2);
-            Runtime.getRuntime().exec(b[0]);
+            Runtime.getRuntime().exec(b[0]);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

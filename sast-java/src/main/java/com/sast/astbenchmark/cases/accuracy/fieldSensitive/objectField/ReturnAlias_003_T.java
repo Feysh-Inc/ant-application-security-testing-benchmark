@@ -35,7 +35,7 @@ public class ReturnAlias_003_T {
             A e = Invoke.alias(d);
             a.b = cmd;
 
-            Runtime.getRuntime().exec(e.b);
+            Runtime.getRuntime().exec(e.b);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

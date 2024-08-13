@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("completeness/base/chain/taintKind")
 public class MustTaintKind_002_F {
     @GetMapping("MustTaintKind_002_F")
-    public void testcase(@RequestParam String name) {
+    public void testcase(@RequestParam String name) {  // !$CWE-89
         String sql = "select * from user where username = " + name;
     }
 }

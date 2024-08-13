@@ -29,7 +29,7 @@ public class Expression_PostfixExpression_001_T {
         Map<String, Object> modelMap = new HashMap<>();
         try {
             cmd++;
-            Runtime.getRuntime().exec(String.valueOf(cmd));
+            Runtime.getRuntime().exec(String.valueOf(cmd));  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

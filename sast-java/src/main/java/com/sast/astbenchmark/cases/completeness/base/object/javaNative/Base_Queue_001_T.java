@@ -32,7 +32,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 @RequestMapping("completeness/base/object/javaNative")
 public class Base_Queue_001_T {
     @PostMapping("Base_Queue_001_T")
-    public Map<String, Object> aTaintCase0142(@RequestBody List<String> cmd) {
+    public Map<String, Object> aTaintCase0142(@RequestBody List<String> cmd) {  // $CWE-78
         Map<String, Object> modelMap = new HashMap<>();
         if (cmd == null || CollectionUtils.isEmpty(cmd)) {
             modelMap.put("status", "error");

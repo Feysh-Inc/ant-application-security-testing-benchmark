@@ -26,7 +26,7 @@ import java.util.Map;
 @RequestMapping("completeness/base/chain/astTaint")
 public class Statement_IfStatement_001_T {
     @GetMapping("Statement_IfStatement_001_T/{cmd}")
-    public Map<String, Object> aTaintCase015(@PathVariable String cmd) {
+    public Map<String, Object> aTaintCase015(@PathVariable String cmd) {  // $CWE-78
         Map<String, Object> modelMap = new HashMap<>();
 
         try {

@@ -37,7 +37,7 @@ public class QueueWithLambda_002_F {
             queue.stream().forEach(e -> {
                 if ("cd /".equals(e)) {
                     try {
-                        Runtime.getRuntime().exec(e);
+                        Runtime.getRuntime().exec(e);  // !$CWE-78
                     } catch (IOException ex) {
                     }
                 }

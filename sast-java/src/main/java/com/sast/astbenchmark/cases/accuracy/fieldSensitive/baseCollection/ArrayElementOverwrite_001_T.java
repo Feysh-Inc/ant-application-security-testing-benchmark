@@ -31,7 +31,7 @@ public class ArrayElementOverwrite_001_T {
             a[1] = cmd;
             String[] c = b;
 
-            Runtime.getRuntime().exec(c[1]);
+            Runtime.getRuntime().exec(c[1]);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

@@ -27,7 +27,7 @@ import java.util.Map;
 @RequestMapping("completeness/base/object/javaNative")
 public class Base_Char_001_T {
     @GetMapping("Base_Char_001_T/{cmd}")
-    public Map<String, Object> aTaintCase0137(@PathVariable char cmd) {
+    public Map<String, Object> aTaintCase0137(@PathVariable char cmd) {  // $CWE-78
         Map<String, Object> modelMap = new HashMap<>();
         SinkUtil.sink(cmd);
         modelMap.put("status", "success");

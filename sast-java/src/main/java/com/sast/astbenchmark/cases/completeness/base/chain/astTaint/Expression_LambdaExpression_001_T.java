@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 @RequestMapping("completeness/base/chain/astTaint")
 public class Expression_LambdaExpression_001_T {
     @GetMapping("Expression_LambdaExpression_001_T")
-    public Map<String, Object> aTaintCase017(@RequestBody List<String> urlList) {
+    public Map<String, Object> aTaintCase017(@RequestBody List<String> urlList) {  // $CWE-918
         Map<String, Object> modelMap = new HashMap<>();
         {
             urlList.stream().map(url -> {

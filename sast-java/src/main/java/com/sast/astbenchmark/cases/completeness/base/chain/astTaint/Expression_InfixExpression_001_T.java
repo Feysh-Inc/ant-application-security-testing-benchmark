@@ -28,7 +28,7 @@ public class Expression_InfixExpression_001_T {
         Map<String, Object> modelMap = new HashMap<>();
         try {
             String a = cmd+"a";
-            Runtime.getRuntime().exec(a);
+            Runtime.getRuntime().exec(a);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

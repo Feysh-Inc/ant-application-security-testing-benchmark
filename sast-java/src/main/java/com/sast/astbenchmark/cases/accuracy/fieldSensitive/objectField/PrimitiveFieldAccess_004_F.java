@@ -30,7 +30,7 @@ public class PrimitiveFieldAccess_004_F {
             PrimitiveData i = new PrimitiveData();
             PrimitiveData b = i;
             b.setIntData(100);
-            Runtime.getRuntime().exec("cat /some/path/" + i.intData + ".png");
+            Runtime.getRuntime().exec("cat /some/path/" + i.intData + ".png");  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

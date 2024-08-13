@@ -29,7 +29,7 @@ public class DifferentParamsForFunction_003_T {
         try {
             String c1 = Invoke.id(cmd);
             String c2 = Invoke.id("foo");
-            Runtime.getRuntime().exec(c1);
+            Runtime.getRuntime().exec(c1);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

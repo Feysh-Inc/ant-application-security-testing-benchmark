@@ -33,7 +33,7 @@ public class DifferentParamsForFunction_001_T {
         i = 1;
         exec2 = CmdUtil.getCmdWithContextSensitive(i, cmd);
         try {
-            Runtime.getRuntime().exec(exec2);
+            Runtime.getRuntime().exec(exec2);  // $CWE-78
             modelMap.put("status", "success");
         } catch (IOException e) {
             modelMap.put("status", "error");

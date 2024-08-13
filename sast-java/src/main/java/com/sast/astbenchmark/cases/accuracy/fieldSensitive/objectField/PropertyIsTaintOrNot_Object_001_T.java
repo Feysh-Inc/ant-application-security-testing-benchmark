@@ -30,7 +30,7 @@ public class PropertyIsTaintOrNot_Object_001_T {
             CmdObject simpleBean = new CmdObject();
             simpleBean.setCmd(cmd);
             simpleBean.setCmd2("cd /");
-            Runtime.getRuntime().exec(simpleBean.getCmd());
+            Runtime.getRuntime().exec(simpleBean.getCmd());  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

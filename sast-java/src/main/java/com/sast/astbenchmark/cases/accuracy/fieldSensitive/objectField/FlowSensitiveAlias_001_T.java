@@ -33,7 +33,7 @@ public class FlowSensitiveAlias_001_T {
             Invoke.taintMe(dc1, cmd);
             Invoke.copy(dc1, dc2);
 
-            Runtime.getRuntime().exec(dc2.data);
+            Runtime.getRuntime().exec(dc2.data);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

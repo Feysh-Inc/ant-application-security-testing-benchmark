@@ -37,7 +37,7 @@ public class InnerClassAlias_009_T {
             a.obj = a.new Inner2b();
             Inner1b.Inner2b inner = a.obj;
 
-            Runtime.getRuntime().exec(inner.getParent());
+            Runtime.getRuntime().exec(inner.getParent());  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

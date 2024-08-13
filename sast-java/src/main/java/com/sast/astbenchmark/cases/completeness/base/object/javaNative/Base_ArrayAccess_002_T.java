@@ -29,7 +29,7 @@ public class Base_ArrayAccess_002_T {
         Map<String, Object> modelMap = new HashMap<>();
         try {
             Cookie[] cookies = request.getCookies();
-            Runtime.getRuntime().exec(cookies[0].getName());
+            Runtime.getRuntime().exec(cookies[0].getName());  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

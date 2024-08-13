@@ -37,7 +37,7 @@ public class HeapAllocSite_001_T {
             y2.f = "foo";
             X rx1 = Invoke.assign(x1, y1);
             X rx2 = Invoke.assign(x2, y2);
-            Runtime.getRuntime().exec(rx1.y.f);
+            Runtime.getRuntime().exec(rx1.y.f);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

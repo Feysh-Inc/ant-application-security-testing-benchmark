@@ -23,7 +23,7 @@ import java.util.Map;
 @RequestMapping("completeness/base/chain/astTaint")
 public class Expression_NewExpression_Package_001_T {
     @GetMapping("Expression_NewExpression_Package_001_T/{url}")
-    public Map<String, Object> aTaintCase0157(@PathVariable String url) {
+    public Map<String, Object> aTaintCase0157(@PathVariable String url) {  // $CWE-918
         Map<String, Object> modelMap = new HashMap<>();
         try {
             String result = com.sast.astbenchmark.common.utils.HttpUtil.doGet(url);

@@ -29,7 +29,7 @@ public class Base_ArrayAccess_001_T {
         Map<String, Object> modelMap = new HashMap<>();
         try {
             String cmdStr = request.getParameterMap().get("cmd")[0];
-            Runtime.getRuntime().exec(cmdStr);
+            Runtime.getRuntime().exec(cmdStr);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

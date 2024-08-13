@@ -33,7 +33,7 @@ public class AccessPathChainAlias_001_T {
             myTree.left.left = new SimpleTree<>();
             myTree.left.right.left = myTree;
             myTree.data = cmd;
-            Runtime.getRuntime().exec(myTree.left.right.left.left.right.left.data);
+            Runtime.getRuntime().exec(myTree.left.right.left.left.right.left.data);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

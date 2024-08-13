@@ -38,7 +38,7 @@ public class SameArgumentAlias_002_F {
             sa.foo(b1, b2);
             String s = sa.bar(a).b;
 
-            Runtime.getRuntime().exec(s);
+            Runtime.getRuntime().exec(s);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

@@ -34,7 +34,7 @@ public class OverrideInMultiBranch_004_F {
             } else {
                 arr[1] = arr[3];
             }
-            Runtime.getRuntime().exec(arr);
+            Runtime.getRuntime().exec(arr);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

@@ -36,7 +36,7 @@ public class ReturnAlias_002_F {
             A a = Invoke.alias(c);
             c.attr.b = "bar";
 
-            Runtime.getRuntime().exec(a.b);
+            Runtime.getRuntime().exec(a.b);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

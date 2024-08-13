@@ -36,7 +36,7 @@ public class StaticFieldAlias_002_F {
             B b = StaticData.staticB2;
             b.attr = new A();
 
-            Runtime.getRuntime().exec(StaticData.staticB1.attr.b);
+            Runtime.getRuntime().exec(StaticData.staticB1.attr.b);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

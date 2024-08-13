@@ -33,7 +33,7 @@ public class IntraproceduralAlias_002_F {
             A a = b.attr;
             b.attr.b = "foo";
 
-            Runtime.getRuntime().exec(a.b);
+            Runtime.getRuntime().exec(a.b);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

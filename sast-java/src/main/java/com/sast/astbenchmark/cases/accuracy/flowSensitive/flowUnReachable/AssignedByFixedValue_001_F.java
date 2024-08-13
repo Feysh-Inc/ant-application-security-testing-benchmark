@@ -27,7 +27,7 @@ public class AssignedByFixedValue_001_F {
         Map<String, Object> modelMap = new HashMap<>();
         try {
             cmd= "ls";
-            Runtime.getRuntime().exec(cmd);
+            Runtime.getRuntime().exec(cmd);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

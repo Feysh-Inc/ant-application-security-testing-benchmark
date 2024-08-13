@@ -33,7 +33,7 @@ public class Base_Integer_002_T {
             return modelMap;
         }
         try {
-            Runtime.getRuntime().exec(String.valueOf(cmd));
+            Runtime.getRuntime().exec(String.valueOf(cmd));  // $CWE-78
             modelMap.put("status", "success");
         } catch (IOException e) {
             modelMap.put("status", "error");

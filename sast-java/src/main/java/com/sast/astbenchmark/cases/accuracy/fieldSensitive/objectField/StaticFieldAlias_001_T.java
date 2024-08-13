@@ -33,7 +33,7 @@ public class StaticFieldAlias_001_T {
             StaticData.staticB1 = StaticData.staticB2;
             StaticData.staticB2.attr.b = cmd;
 
-            Runtime.getRuntime().exec(StaticData.staticB1.attr.b);
+            Runtime.getRuntime().exec(StaticData.staticB1.attr.b);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

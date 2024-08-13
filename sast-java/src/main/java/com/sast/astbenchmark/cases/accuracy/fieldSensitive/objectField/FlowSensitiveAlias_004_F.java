@@ -32,7 +32,7 @@ public class FlowSensitiveAlias_004_F {
             A a = new A();
             B b = new B();
             Invoke.alias(b, a);
-            Runtime.getRuntime().exec(b.attr.b);
+            Runtime.getRuntime().exec(b.attr.b);  // !$CWE-78
             a.b = cmd;
             modelMap.put("status", "success");
         } catch (Exception e) {

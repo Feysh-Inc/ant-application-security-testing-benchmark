@@ -28,7 +28,7 @@ import java.util.Map;
 @RequestMapping("completeness/base/object/javaNative")
 public class Base_Map_001_T {
     @PostMapping("Base_Map_001_T")
-    public Map<String, Object> aTaintCase0140(@RequestBody Map<String, String> cmd) {
+    public Map<String, Object> aTaintCase0140(@RequestBody Map<String, String> cmd) {  // $CWE-78
         Map<String, Object> modelMap = new HashMap<>();
         if (cmd == null || cmd.isEmpty()) {
             modelMap.put("status", "error");

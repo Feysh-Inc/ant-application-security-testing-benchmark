@@ -30,7 +30,7 @@ public class DifferentIfBranch_ArrayLength_002_F {
             if (arr.length > 3) { // always false
                 arr[1] = cmd; // UnReachable
             }
-            Runtime.getRuntime().exec(arr);
+            Runtime.getRuntime().exec(arr);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

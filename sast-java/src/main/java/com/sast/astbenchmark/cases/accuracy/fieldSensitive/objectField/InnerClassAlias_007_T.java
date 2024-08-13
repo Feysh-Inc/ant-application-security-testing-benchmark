@@ -36,7 +36,7 @@ public class InnerClassAlias_007_T {
             a.obj2.foo.set(cmd);
             String s = b.get(); // tainted
 
-            Runtime.getRuntime().exec(s);
+            Runtime.getRuntime().exec(s);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

@@ -27,7 +27,7 @@ public class Expression_NewExpression_Array_001_T {
         Map<String, Object> modelMap = new HashMap<>();
         try {
             String[] chars = new String[]{cmd[0],cmd[1]};
-            Runtime.getRuntime().exec(chars);
+            Runtime.getRuntime().exec(chars);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

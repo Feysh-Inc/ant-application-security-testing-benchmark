@@ -33,7 +33,7 @@ public class AccessPathChainAlias_004_F {
             SimpleLinkedList<A> list = Invoke.newSimpleLinkedList(a);
             a.b = cmd;
             A last = list.next.next.next.next.next.data; // NULL
-            Runtime.getRuntime().exec(last.b); // NPE
+            Runtime.getRuntime().exec(last.b);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

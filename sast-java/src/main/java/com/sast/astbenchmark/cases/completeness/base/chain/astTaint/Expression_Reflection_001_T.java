@@ -26,7 +26,7 @@ import java.util.Map;
 @RequestMapping("completeness/base/chain/astTaint")
 public class Expression_Reflection_001_T {
     @GetMapping("Expression_Reflection_001_T/{cmd}/{methodname}")
-    public Map<String, Object> aTaintCase0134(@PathVariable String cmd) {
+    public Map<String, Object> aTaintCase0134(@PathVariable String cmd) {  // $CWE-78
         Map<String, Object> modelMap = new HashMap<>();
         if (cmd == null) {
             modelMap.put("status", "error");

@@ -37,7 +37,7 @@ public class FieldUnAlias_004_F {
         Invoke.doUnalias(b1);
         b2.attr.b = "bar";
         try {
-            Runtime.getRuntime().exec(b1.attr.b);
+            Runtime.getRuntime().exec(b1.attr.b);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (IOException e) {
             modelMap.put("status", "error");

@@ -31,7 +31,7 @@ public class HeapOverwriteAlias_003_T {
             A a2 = a1;
             a1.b = cmd;
 
-            Runtime.getRuntime().exec(a1.b);
+            Runtime.getRuntime().exec(a1.b);  // $CWE-78
             a2.b = "Y";
             modelMap.put("status", "success");
         } catch (Exception e) {

@@ -32,7 +32,7 @@ public class Base_StringArray_001_T {
             return modelMap;
         }
         try {
-            Runtime.getRuntime().exec(cmd[0]);
+            Runtime.getRuntime().exec(cmd[0]);  // $CWE-78
             modelMap.put("status", "success");
         } catch (IOException e) {
             modelMap.put("status", "error");

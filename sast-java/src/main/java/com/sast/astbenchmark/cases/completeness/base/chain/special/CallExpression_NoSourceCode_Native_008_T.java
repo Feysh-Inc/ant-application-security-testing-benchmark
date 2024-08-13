@@ -27,7 +27,7 @@ public class CallExpression_NoSourceCode_Native_008_T {
     public Map<String, Object> aTaintCase0166(@RequestParam String cmd ) {
         Map<String, Object> modelMap = new HashMap<>();
         try {
-            Runtime.getRuntime().exec(cmd.intern());
+            Runtime.getRuntime().exec(cmd.intern());  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

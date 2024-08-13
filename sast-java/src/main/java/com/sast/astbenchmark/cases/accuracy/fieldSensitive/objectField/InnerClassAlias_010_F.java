@@ -37,7 +37,7 @@ public class InnerClassAlias_010_F {
             a.parentData = cmd;
             Inner1b.Inner2b inner = a.obj;
 
-            Runtime.getRuntime().exec(inner.getParent()); // null
+            Runtime.getRuntime().exec(inner.getParent());  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

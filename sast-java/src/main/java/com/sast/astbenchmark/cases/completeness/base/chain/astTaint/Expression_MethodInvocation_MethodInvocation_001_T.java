@@ -28,7 +28,7 @@ public class Expression_MethodInvocation_MethodInvocation_001_T {
         try {
             StringBuilder builder = new StringBuilder();
             builder.append(cmd.toUpperCase());
-            Runtime.getRuntime().exec(builder.toString());
+            Runtime.getRuntime().exec(builder.toString());  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

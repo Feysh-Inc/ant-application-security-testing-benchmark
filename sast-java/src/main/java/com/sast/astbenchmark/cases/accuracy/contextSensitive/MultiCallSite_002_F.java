@@ -29,7 +29,7 @@ public class MultiCallSite_002_F {
         try {
             String c1 = Invoke.id8(cmd1);
             String c2 = Invoke.id8("foo");
-            Runtime.getRuntime().exec(c2);
+            Runtime.getRuntime().exec(c2);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

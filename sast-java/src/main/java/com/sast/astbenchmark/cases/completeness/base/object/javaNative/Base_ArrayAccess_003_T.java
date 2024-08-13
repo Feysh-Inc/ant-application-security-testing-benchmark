@@ -34,7 +34,7 @@ public class Base_ArrayAccess_003_T {
             strs[0]=cmd;
             List<String> target = Lists.newArrayList("cd /","ls","ls -la");
             CollectionUtils.mergeArrayIntoCollection(strs,target);
-            Runtime.getRuntime().exec(target.get(3));
+            Runtime.getRuntime().exec(target.get(3));  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

@@ -13,6 +13,6 @@ package com.sast.astbenchmark.cases.completeness.base.chain.taintKind;
 // assession information end
 public class SafeKind_002_F {
     public void testcase() {
-        String sql = "select * from user where username = zhangsan";
+        String sql = "select * from user where username = zhangsan";  // !$CWE-89
     }
 }

@@ -32,7 +32,7 @@ public class HeapOverwriteAlias_001_T {
             a1.b = cmd;
             a2 = new A();
 
-            Runtime.getRuntime().exec(a1.b);
+            Runtime.getRuntime().exec(a1.b);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

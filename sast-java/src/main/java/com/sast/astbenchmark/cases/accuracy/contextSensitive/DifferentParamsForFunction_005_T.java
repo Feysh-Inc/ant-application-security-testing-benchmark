@@ -28,7 +28,7 @@ public class DifferentParamsForFunction_005_T {
         Map<String, Object> modelMap = new HashMap<>();
         try {
             String a = Invoke.chooseOne(3, "a", "b", "c", cmd, "e");
-            Runtime.getRuntime().exec(a);
+            Runtime.getRuntime().exec(a);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

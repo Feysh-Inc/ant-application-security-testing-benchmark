@@ -28,7 +28,7 @@ public class ArrayOutOfBoundOrNot_002_F {
         try {
             String[] arr = new String[]{"foo", "xx", "bar"};
             arr[3] = cmd; // OutOfBound
-            Runtime.getRuntime().exec(arr);
+            Runtime.getRuntime().exec(arr);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

@@ -28,7 +28,7 @@ public class ObjectCanBeAssigned_002_F {
         try {
             String exec = "ls";
             String cmd = a ;
-            Runtime.getRuntime().exec(exec);
+            Runtime.getRuntime().exec(exec);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

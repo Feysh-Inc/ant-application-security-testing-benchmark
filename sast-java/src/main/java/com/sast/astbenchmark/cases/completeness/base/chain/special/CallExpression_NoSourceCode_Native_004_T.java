@@ -28,7 +28,7 @@ public class CallExpression_NoSourceCode_Native_004_T {
         Map<String, Object> modelMap = new HashMap<>();
         try {
             char data[] =  cmd.toCharArray();
-            Runtime.getRuntime().exec(String.copyValueOf(data));
+            Runtime.getRuntime().exec(String.copyValueOf(data));  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

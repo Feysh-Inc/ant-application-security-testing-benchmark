@@ -35,7 +35,7 @@ public class Base_Set_002_T {
         Set<String> stringSet = new HashSet<>(cmd);
         try {
 
-            Runtime.getRuntime().exec(stringSet.stream().iterator().next());
+            Runtime.getRuntime().exec(stringSet.stream().iterator().next());  // $CWE-78
             modelMap.put("status", "success");
         } catch (IOException e) {
             modelMap.put("status", "error");

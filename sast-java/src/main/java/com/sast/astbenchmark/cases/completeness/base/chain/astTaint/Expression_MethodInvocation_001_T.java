@@ -25,7 +25,7 @@ import java.util.Map;
 @RequestMapping("completeness/base/chain/astTaint")
 public class Expression_MethodInvocation_001_T {
     @GetMapping("Expression_MethodInvocation_001_T/{cmd}")
-    public Map<String, Object> aTaintCase013(@PathVariable String cmd) {
+    public Map<String, Object> aTaintCase013(@PathVariable String cmd) {  // $CWE-78
         Map<String, Object> modelMap = new HashMap<>();
         try {
             CmdUtil.run(cmd+"|grep a");

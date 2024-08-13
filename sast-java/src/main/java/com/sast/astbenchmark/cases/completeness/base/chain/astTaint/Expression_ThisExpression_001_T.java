@@ -28,7 +28,7 @@ public class Expression_ThisExpression_001_T {
     private SSRFShowManager ssrfShowManager = new SSRFShowManageImpl();
 
     @GetMapping("Expression_ThisExpression_001_T/{url}")
-    public Map<String, Object> aTaintCase0130(@PathVariable String url) {
+    public Map<String, Object> aTaintCase0130(@PathVariable String url) {  // $CWE-918
         Map<String, Object> modelMap = new HashMap<>();
         try {
 

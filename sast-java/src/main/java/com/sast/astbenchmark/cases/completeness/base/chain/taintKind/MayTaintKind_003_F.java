@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("completeness/base/chain/taintKind")
 public class MayTaintKind_003_F {
     @GetMapping("MayTaintKind_003_F")
-    public void testcase(@RequestParam String name, @RequestParam Integer condition) {
+    public void testcase(@RequestParam String name, @RequestParam Integer condition) {  // !$CWE-89
         String sql;
         String sql2 = "select * from user where username = " + "zhangsan";
         if (condition > 0) {

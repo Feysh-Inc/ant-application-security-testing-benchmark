@@ -30,7 +30,7 @@ public class PropertyIsTaintOrNot_Object_002_F {
             CmdObject cmdObject = new CmdObject();
             cmdObject.setCmd(cmd);
             cmdObject.setCmd2("cd /");
-            Runtime.getRuntime().exec(cmdObject.getCmd2());
+            Runtime.getRuntime().exec(cmdObject.getCmd2());  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

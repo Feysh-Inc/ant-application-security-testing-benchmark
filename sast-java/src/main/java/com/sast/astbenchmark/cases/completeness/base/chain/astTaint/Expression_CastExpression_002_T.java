@@ -31,7 +31,7 @@ public class Expression_CastExpression_002_T {
         try {
 
             URL realUrl = new URL(url);
-            HttpURLConnection connection = (HttpURLConnection) realUrl.openConnection();
+            HttpURLConnection connection = (HttpURLConnection) realUrl.openConnection();  // $CWE-918
             connection.setRequestMethod("GET");
             connection.getResponseMessage();
             modelMap.put("status", "success");

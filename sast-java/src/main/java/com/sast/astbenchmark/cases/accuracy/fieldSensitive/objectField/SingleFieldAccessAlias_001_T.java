@@ -33,7 +33,7 @@ public class SingleFieldAccessAlias_001_T {
             A b = Invoke.alias(a);
             a.b = cmd;
 
-            Runtime.getRuntime().exec(b.b);
+            Runtime.getRuntime().exec(b.b);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

@@ -31,7 +31,7 @@ public class Base_ArrayAccess_004_T {
             strings[0]="cd ~";
             strings[1]=cmd;
             strings[2]="cd /";
-            Runtime.getRuntime().exec(strings[1]);
+            Runtime.getRuntime().exec(strings[1]);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

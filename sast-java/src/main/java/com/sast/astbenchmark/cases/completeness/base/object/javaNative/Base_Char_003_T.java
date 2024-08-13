@@ -27,7 +27,7 @@ public class Base_Char_003_T {
     public Map<String, Object> aTaintCase0137(@PathVariable char cmd) {
         Map<String, Object> modelMap = new HashMap<>();
         try {
-            Runtime.getRuntime().exec(String.valueOf(cmd));
+            Runtime.getRuntime().exec(String.valueOf(cmd));  // $CWE-78
             modelMap.put("status", "success");
         }
         catch (Exception e){

@@ -27,7 +27,7 @@ public class Base_ArrayAccess_006_F {
         Map<String, Object> modelMap = new HashMap<>();
         try {
             String[] arr = new String[]{"foo", "xx", "bar"};
-            Runtime.getRuntime().exec(arr);
+            Runtime.getRuntime().exec(arr);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

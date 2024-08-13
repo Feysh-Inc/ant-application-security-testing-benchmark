@@ -38,7 +38,7 @@ public class Base_Queue_002_T {
         Queue<String> queue = new LinkedBlockingQueue();
         try {
             queue.add(cmd.get(0));
-            Runtime.getRuntime().exec(queue.peek());
+            Runtime.getRuntime().exec(queue.peek());  // $CWE-78
             modelMap.put("status", "success");
         } catch (IOException e) {
             modelMap.put("status", "error");

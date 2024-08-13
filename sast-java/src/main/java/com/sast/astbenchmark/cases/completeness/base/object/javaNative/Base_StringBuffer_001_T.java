@@ -34,7 +34,7 @@ public class Base_StringBuffer_001_T {
         StringBuffer data = new StringBuffer();
         data.append(cmd);
         try {
-            Runtime.getRuntime().exec(data.toString());
+            Runtime.getRuntime().exec(data.toString());  // $CWE-78
             modelMap.put("status", "success");
         } catch (IOException e) {
             modelMap.put("status", "error");

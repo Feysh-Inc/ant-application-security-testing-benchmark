@@ -25,7 +25,7 @@ import java.util.Map;
 @RequestMapping("accuracy/fieldSensitive/baseCollection")
 public class MapPutGet_002_F {
     @PostMapping(value = "MapPutGet_002_F")
-    public Map<String, Object> testcase(@RequestParam String url) {
+    public Map<String, Object> testcase(@RequestParam String url) {  // !$CWE-918
         Map<String, Object> modelMap = new HashMap<>();
         try {
             Map<String, String> paramMap = new HashMap<>();

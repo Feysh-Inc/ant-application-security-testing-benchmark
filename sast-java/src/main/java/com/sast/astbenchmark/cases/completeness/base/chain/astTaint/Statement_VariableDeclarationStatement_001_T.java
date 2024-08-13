@@ -29,7 +29,7 @@ public class Statement_VariableDeclarationStatement_001_T {
         Map<String, Object> modelMap = new HashMap<>();
         char[] data = cmd.toCharArray();
         try {
-            Runtime.getRuntime().exec(new String(data));
+            Runtime.getRuntime().exec(new String(data));  // $CWE-78
             modelMap.put("status", "success");
         } catch (IOException e) {
             modelMap.put("status", "error");

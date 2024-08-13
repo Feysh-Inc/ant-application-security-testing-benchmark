@@ -30,7 +30,7 @@ public class CallExpression_NoSourceCode_Native_030_T {
         try {
             byte[] b1 = cmd.getBytes();
             byte[] b2 = Arrays.copyOfRange(b1,0,2);
-            Runtime.getRuntime().exec(new String(b2));
+            Runtime.getRuntime().exec(new String(b2));  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

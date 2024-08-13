@@ -15,7 +15,7 @@ import com.sast.astbenchmark.common.utils.JDBCUtil;
 // assession information end
 public class SafeKind_001_F {
     public void testcase() {
-        String sql = "select * from user where username = zhangsan";
+        String sql = "select * from user where username = zhangsan";  // !$CWE-89
         JDBCUtil.execSql(sql);
     }
 }

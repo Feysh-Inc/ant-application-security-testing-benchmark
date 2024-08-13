@@ -28,7 +28,7 @@ public class Base_VarargArrayAccess_002_F {
         Map<String, Object> modelMap = new HashMap<>();
         try {
             String[] strs = Invoke.generateMutableArray("a", "b", "c", "d", "e");
-            Runtime.getRuntime().exec(strs);
+            Runtime.getRuntime().exec(strs);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

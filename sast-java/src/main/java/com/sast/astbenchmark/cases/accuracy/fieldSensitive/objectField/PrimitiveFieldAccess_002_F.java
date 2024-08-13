@@ -33,7 +33,7 @@ public class PrimitiveFieldAccess_002_F {
             A a = new A();
             b.attr = a;
             a.i = id;
-            Runtime.getRuntime().exec("cat /some/path/" + b.attr.i + ".png");
+            Runtime.getRuntime().exec("cat /some/path/" + b.attr.i + ".png");  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

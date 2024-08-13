@@ -29,7 +29,7 @@ public class Expression_MethodInvocation_Argument_001_T {
         try {
             char[] chars= new char[]{0,0};
             cmd.getChars(0,2,chars,0);
-            Runtime.getRuntime().exec(String.valueOf(chars));
+            Runtime.getRuntime().exec(String.valueOf(chars));  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

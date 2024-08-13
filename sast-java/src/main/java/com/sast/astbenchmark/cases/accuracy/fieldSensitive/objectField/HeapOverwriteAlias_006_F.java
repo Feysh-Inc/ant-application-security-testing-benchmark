@@ -29,7 +29,7 @@ public class HeapOverwriteAlias_006_F {
         try {
             H h = new H();
             h.read();
-            Runtime.getRuntime().exec(h.i.str2);
+            Runtime.getRuntime().exec(h.i.str2);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

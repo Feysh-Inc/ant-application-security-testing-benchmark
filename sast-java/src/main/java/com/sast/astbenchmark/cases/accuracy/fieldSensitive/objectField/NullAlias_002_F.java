@@ -41,7 +41,7 @@ public class NullAlias_002_F {
             dc.data = a;
             dc = null;
 
-            Runtime.getRuntime().exec(dc3.next.data);  // NPE
+            Runtime.getRuntime().exec(dc3.next.data);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

@@ -29,7 +29,7 @@ public class CallExpression_NoSourceCode_Native_031_T {
         try {
             StringBuilder builder = new StringBuilder();
             builder.insert(0, cmd);
-            Runtime.getRuntime().exec(builder.toString());
+            Runtime.getRuntime().exec(builder.toString());  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

@@ -31,7 +31,7 @@ public class Statement_ForStatement_001_T {
             for(int i =0 ;i<10; i++){
                 a= cmd+"|";
             }
-            Runtime.getRuntime().exec(a);
+            Runtime.getRuntime().exec(a);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

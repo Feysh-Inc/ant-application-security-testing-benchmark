@@ -38,7 +38,7 @@ public class InnerClassAlias_003_F {
 
             String s = a.get();
 
-            Runtime.getRuntime().exec(s);
+            Runtime.getRuntime().exec(s);  // !$CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

@@ -29,7 +29,7 @@ public class Expression_CastExpression_001_T {
         try {
             Object cmdObject = new Object();
             cmdObject=cmd;
-            Runtime.getRuntime().exec((String) cmdObject);
+            Runtime.getRuntime().exec((String) cmdObject);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");

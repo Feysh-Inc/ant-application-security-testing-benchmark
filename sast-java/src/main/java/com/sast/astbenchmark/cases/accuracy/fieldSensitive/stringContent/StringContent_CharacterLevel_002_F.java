@@ -24,7 +24,7 @@ import java.util.Map;
 @RequestMapping("accuracy/fieldSensitive/stringContent")
 public class StringContent_CharacterLevel_002_F {
     @PostMapping(value = "StringContent_CharacterLevel_002_F")
-    public Map<String, Object> testcase(@RequestParam String param) {
+    public Map<String, Object> testcase(@RequestParam String param) {  // !$CWE-918
         Map<String, Object> modelMap = new HashMap<>();
         try {
             String domain = "www.fixdomain.com/a";

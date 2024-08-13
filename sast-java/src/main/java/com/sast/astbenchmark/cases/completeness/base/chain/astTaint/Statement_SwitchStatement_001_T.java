@@ -25,7 +25,7 @@ import java.util.Map;
 @RequestMapping("completeness/base/chain/astTaint")
 public class Statement_SwitchStatement_001_T {
     @GetMapping("Statement_SwitchStatement_001_T/{type}/{cmd}")
-    public Map<String, Object> aTaintCase016(@PathVariable String cmd, @PathVariable String type) {
+    public Map<String, Object> aTaintCase016(@PathVariable String cmd, @PathVariable String type) {  // $CWE-78
         Map<String, Object> modelMap = new HashMap<>();
         try {
             switch (type){

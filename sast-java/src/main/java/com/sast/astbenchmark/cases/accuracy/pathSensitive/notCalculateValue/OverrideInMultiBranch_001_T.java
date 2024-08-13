@@ -33,7 +33,7 @@ public class OverrideInMultiBranch_001_T {
             } else if (new Random().nextBoolean()) {
                 cmd1 = "ll";
             }
-            Runtime.getRuntime().exec(cmd1);
+            Runtime.getRuntime().exec(cmd1);  // $CWE-78
             modelMap.put("status", "success");
         } catch (Exception e) {
             modelMap.put("status", "error");
